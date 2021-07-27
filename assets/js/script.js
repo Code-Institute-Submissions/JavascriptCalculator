@@ -18,5 +18,29 @@ class Calculator {
       this.previousOperand = previousOperand
       this.currentOperand = currentOperand
     }
-}
 
+    clear(){
+
+    }
+
+    delete() {
+
+    }
+
+    appendNum(number) {
+
+    }
+
+    selectOperator(operator) {
+
+    }
+
+    calculate() {
+
+    }
+
+    displayResult() {
+
+    }
+
+}
