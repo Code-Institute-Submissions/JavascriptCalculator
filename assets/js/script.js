@@ -9,17 +9,19 @@ deleteButton = document.querySelector('[data-delete]'),
 // Call the data-all-clear (AC Button) attribute and create a variable
 allClearButton = document.querySelector('[data-all-clear]'),
 // Call the data-previous-operand attribute and create a variable
-previousOperand = document.querySelector('[data-previous-operand]'),
+previousOperandText = document.querySelector('[data-previous-operand]'),
 // Call the data-current-operand
-currentOperand = document.querySelector('[data-current-operand]');
+currentOperandText = document.querySelector('[data-current-operand]');
 
-class Calculator {
-    constructor(previousOperand, currentOperand) {
-      this.previousOperand = previousOperand;
-      this.currentOperand = currentOperand;
+// Class Construct Method Function
+class  Calculator {
+    constructor(previousOperandText, currentOperandText) {
+      this.previousOperandText = previousOperandText;
+      this.currentOperandText = currentOperandText;
       this.clear();
     }
 
+    // Clear Calculator Function
     clear(){
         this.previousOperand = '';
         this.currentOperand = '';
@@ -31,7 +33,7 @@ class Calculator {
     }
 
     appendNum(number) {
-
+        
     }
 
     selectOperator(operator) {
@@ -43,7 +45,18 @@ class Calculator {
     }
 
     displayResult() {
-
+        
     }
 
 }
+// Create new calculator Variable with classname calculator
+const calculator = new Calculator(previousOperandText, currentOperandText)
+// Add an event listener for each button innertext
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      calculator.appendNum(button.innerText)
+      // And display the result
+      calculator.displayResult()
+    })
+  })
+
