@@ -24,7 +24,7 @@ class Calculator {
     // Clear Calculator Function
     clear() {
         this.previousOperand = '';
-        this.currentOperand = '0';
+        this.currentOperand = '';
         this.operator = '';
     }
 
