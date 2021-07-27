@@ -50,7 +50,20 @@
         </main>
         <!-- Footer Start -->
         <footer>
-
+            <!-- PayPal Donate Button -->
+            <form class="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" title="Buy me a beer!">
+                <!-- Identify your business so that you can collect the payments. -->
+                <input type="hidden" name="business" value="support@techcentreuk.co.uk" />
+                <!-- Specify a Donate button. -->
+                <input type="hidden" name="cmd" value="_donations" />
+                <!-- Specify details about the contribution -->
+                <input type="hidden" name="item_name" value="Buy Me a Beer!" />
+                <input type="hidden" name="item_number" value="Free Javascript Calculator" />
+                <input type="hidden" name="currency_code" value="GBP" />
+                <!-- Display the payment button. -->
+                <input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate" />
+                <img alt="PayPal Donate Button" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" />
+            </form>
         </footer>
         <!-- Javascript File Path -->
         <script src="assets/js/script.js"></script>
