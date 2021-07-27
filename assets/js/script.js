@@ -172,3 +172,9 @@ operatorButtons.forEach(button => {
         // And display the result
         calculator.displayResult();
       })
+
+      // Instructions Button
+function instructionsAlert() {
+    let popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
