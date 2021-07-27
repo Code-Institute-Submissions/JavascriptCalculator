@@ -122,3 +122,10 @@ operatorButtons.forEach(button => {
     // And display the result
     calculator.displayResult();
   })
+
+  // Add an event listener for clear button click
+  allClearButton.addEventListener('click', button => {
+    calculator.clear();
+    // And display the result
+    calculator.displayResult();
+  })
