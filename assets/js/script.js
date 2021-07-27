@@ -34,27 +34,61 @@ class  Calculator {
     // Update currentOperand and append the number passed to the end
     appendNum(number) {
         // IF a period is already pressed then return/do not append another
-        if (number === '.' && this.currentOperand.includes('.')) return
+        if (number === '.' && this.currentOperand.includes('.')) return;
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
 
     selectOperator(operator) {
         // If currentOperand is empty then return to stop moving forward with the code
-        if (this.currentOperand === '') return
+        if (this.currentOperand === '') return;
         // IF previousOperand is not a empty string then calculate
         if (this.previousOperand !== '') {
-            this.calculate()
+            this.calculate();
         }
         // Set operator
-        this.operator = operator
+        this.operator = operator;
         // Previous operand to the current operand
-        this.previousOperand = this.currentOperand
+        this.previousOperand = this.currentOperand;
         // Clear current operand
-        this.currentOperand = ''
+        this.currentOperand = '';
     }
 
     calculate() {
-
+        // new variable
+        let calc;
+        // Convert from string to number
+        const previous = parseFloat(this.previousOperand);
+        const current = parseFloat(this.currentOperand);
+        // if NaN then return
+        if (isNaN(previous) || isNaN(current)) return;
+        //IF operator =
+        switch (this.operator) {
+            // + then add previous and current then break
+          case '+':
+            calc = previous + current;
+            break;
+            // - then subtract previous and current then break
+          case '-':
+            calc = previous - current;
+            break;
+            // - then multiply previous and current then break
+          case '*':
+            calc = previous * current;
+            break;
+            // - then divide previous by current then break
+          case '÷':
+            calc = previous / current;
+            break;
+            // Else operator isnt equal to any of the above then return
+          default:
+            return;
+        }
+        // currentOperand = calc
+        this.currentOperand = calc;
+        // Set operator to undefined
+        this.operator = undefined;
+        // Clear previousOperand
+        this.previousOperand = '';
     }
 
     displayResult() {
@@ -63,21 +97,28 @@ class  Calculator {
 
 }
 // Create new calculator Variable with classname calculator
-const calculator = new Calculator(previousOperandText, currentOperandText)
+const calculator = new Calculator(previousOperandText, currentOperandText);
 // Add an event listener for each button innertext
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
-      calculator.appendNum(button.innerText)
+      calculator.appendNum(button.innerText);
       // And display the result
-      calculator.displayResult()
+      calculator.displayResult();
     })
   })
 
 // Add an event listener for each operator button innertext
 operatorButtons.forEach(button => {
     button.addEventListener('click', () => {
-      calculator.selectOperator(button.innerText)
+      calculator.selectOperator(button.innerText);
       // And display the result
-      calculator.displayResult()
+      calculator.displayResult();
     })
+  })
+
+// Add an event listener for equals button click
+  equalsButton.addEventListener('click', button => {
+    calculator.calculate();
+    // And display the result
+    calculator.displayResult();
   })
