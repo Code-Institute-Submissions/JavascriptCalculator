@@ -39,6 +39,12 @@ class  Calculator {
     }
 
     selectOperator(operator) {
+        // If currentOperand is empty then return to stop moving forward with the code
+        if (this.currentOperand === '') return
+        // IF previousOperand is not a empty string then calculate
+        if (this.previousOperand !== '') {
+            this.calculate()
+        }
         // Set operator
         this.operator = operator
         // Previous operand to the current operand
