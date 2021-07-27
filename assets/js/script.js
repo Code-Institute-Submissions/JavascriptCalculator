@@ -110,17 +110,22 @@ class  Calculator {
     // Add Decimals 
     getDisplayNumber(number) {
         const stringNumber = number.toString()
+        // Split interger
         const integerDigits = parseFloat(stringNumber.split('.')[0])
+        // Split String
         const decimalDigits = stringNumber.split('.')[1]
         let integerDisplay
         if (isNaN(integerDigits)) {
           integerDisplay = ''
         } else {
+            // Only allows one decimal point
           integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
         }
         if (decimalDigits != null) {
+            // If Decimals
           return `${integerDisplay}.${decimalDigits}`
         } else {
+            // If no Decimals
           return integerDisplay
         }
 
