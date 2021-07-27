@@ -15,12 +15,15 @@ currentOperand = document.querySelector('[data-current-operand]');
 
 class Calculator {
     constructor(previousOperand, currentOperand) {
-      this.previousOperand = previousOperand
-      this.currentOperand = currentOperand
+      this.previousOperand = previousOperand;
+      this.currentOperand = currentOperand;
+      this.clear();
     }
 
     clear(){
-
+        this.previousOperand = '';
+        this.currentOperand = '';
+        this.operator = 'undefined';
     }
 
     delete() {
