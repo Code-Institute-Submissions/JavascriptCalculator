@@ -12,3 +12,11 @@ allClearButton = document.querySelector('[data-all-clear]'),
 previousOperand = document.querySelector('[data-previous-operand]'),
 // Call the data-current-operand
 currentOperand = document.querySelector('[data-current-operand]');
+
+class Calculator {
+    constructor(previousOperand, currentOperand) {
+      this.previousOperand = previousOperand
+      this.currentOperand = currentOperand
+    }
+}
+
