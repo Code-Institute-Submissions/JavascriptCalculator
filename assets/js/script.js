@@ -31,13 +31,20 @@ class  Calculator {
     delete() {
 
     }
-
+    // Update currentOperand and append the number passed to the end
     appendNum(number) {
-        
+        // IF a period is already pressed then return/do not append another
+        if (number === '.' && this.currentOperand.includes('.')) return
+        this.currentOperand = this.currentOperand.toString() + number.toString();
     }
 
     selectOperator(operator) {
-
+        // Set operator
+        this.operator = operator
+        // Previous operand to the current operand
+        this.previousOperand = this.currentOperand
+        // Clear current operand
+        this.currentOperand = ''
     }
 
     calculate() {
@@ -60,3 +67,11 @@ numberButtons.forEach(button => {
     })
   })
 
+// Add an event listener for each operator button innertext
+operatorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      calculator.selectOperator(button.innerText)
+      // And display the result
+      calculator.displayResult()
+    })
+  })
