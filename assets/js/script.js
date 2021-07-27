@@ -24,13 +24,15 @@ class  Calculator {
     // Clear Calculator Function
     clear(){
         this.previousOperand = '';
-        this.currentOperand = '';
-        this.operator = 'undefined';
+        this.currentOperand = '0';
+        this.operator = '';
     }
 
+    // Delete last digit
     delete() {
-
+        this.currentOperand = this.currentOperand.toString().slice(0, -1);
     }
+
     // Update currentOperand and append the number passed to the end
     appendNum(number) {
         // IF a period is already pressed then return/do not append another
@@ -90,9 +92,38 @@ class  Calculator {
         // Clear previousOperand
         this.previousOperand = '';
     }
-
+    // Display Result
     displayResult() {
-        
+        this.currentOperandText.innerText =
+        this.getDisplayNumber(this.currentOperand)
+        // If operator is not null display previousOperandText + operator
+      if (this.operator != null) {
+        this.previousOperandText.innerText =
+        // Concat previous + operator
+          `${this.getDisplayNumber(this.previousOperand)} ${this.operator}`
+      } else {
+          // Else set to empty string
+        this.previousOperandText.innerText = ''
+      }
+    } 
+
+    // Add Decimals 
+    getDisplayNumber(number) {
+        const stringNumber = number.toString()
+        const integerDigits = parseFloat(stringNumber.split('.')[0])
+        const decimalDigits = stringNumber.split('.')[1]
+        let integerDisplay
+        if (isNaN(integerDigits)) {
+          integerDisplay = ''
+        } else {
+          integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
+        }
+        if (decimalDigits != null) {
+          return `${integerDisplay}.${decimalDigits}`
+        } else {
+          return integerDisplay
+        }
+
     }
 
 }
@@ -129,3 +160,10 @@ operatorButtons.forEach(button => {
     // And display the result
     calculator.displayResult();
   })
+
+    // Add an event listener for clear button click
+    deleteButton.addEventListener('click', button => {
+        calculator.delete();
+        // And display the result
+        calculator.displayResult();
+      })
