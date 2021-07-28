@@ -28,59 +28,76 @@ h1 {
     height: 550px;
     background-color: #D1D9D9;
 }
-
+/* Focal area. / Center */ 
 .calculator-container {
     text-align: center;
     margin: auto;
-    padding-top: 30px;
+    padding-top: 15px;
     width: 60%;
-    height: 500px;
+    height: 525px;
     background-color: #334257;
+}
+/* Calculator (Grey area) */
+#calculator-div {
+    display: inline-block;
+    text-align: center;
+    width: 370px;
+    height: 500px;
+    background-color: grey;
+    padding-top: 15px;
+    border-radius: 25px;
 }
 /* Result Window */
 .output-window .previous-operand {
     color: rgba(255, 255, 255, .75);
     font-size: 1.5rem;
   }
-
   .output-window {
-    display: inline-block; 
-    width: 50%;
-    height: 50px;
+    display: inline-block;
+    text-align: right;
+    width: 332px;
+    height: 80px;
     background-color: rgba(0, 0, 0, .75);
 }
   /* Previous Operand */
   .output-window .previous-operand {
     color: rgba(255, 255, 255, .75);
     font-size: 1.5rem;
-  }
+}
   /* Current Operand */
   .output-window .current-operand {
     color: white;
     font-size: 2.5rem;
-  }
+}
 /* Button Styling */
+/*. Number Buttons */
 [data-number] {
     width: 80px;
     height: 80px;
     color: hsl(205, 23%, 36%);
-    font-size: 2rem;
+    font-size: 1.9rem;
     border-style: outset;
+    border-radius: 5px;
 }
+/* Operator and Delete Buttons */
 [data-operator], [data-delete] {
     width: 80px;
     height: 80px;
     color: #476072;
     font-size: 2rem;
     background-color: palegreen;
+    border-radius: 5px;
 }
+/* Clear Button */
 .clear {
-    width: 165px;
+    width: 163px;
     height: 80px;
     color: #476072;
     font-size: 2rem;
     background-color: orange;
+    border-radius: 5px;
 }
+/* Equals Button */
 .equals {
     width: 164px;
     height: 80px;
@@ -88,7 +105,13 @@ h1 {
     margin:auto;
     font-size: 2rem;
     background-color: palegreen;
+    border-radius: 5px;
 }
+/* Effect When Button Clicked */
+button:active{
+    border-style: inset;
+}
+/* Style for button hover */
 button:hover {
     background-color:#548CA8;
 }
@@ -98,12 +121,14 @@ footer {
     height: 120px;
     background-color: #D1D9D9;
 }
+/* GitHub Logo */
 .myGit {
     color: black;
     text-align: center;
     font-size: 3rem;
     margin-bottom: 10px;
 }
+/* GitHub Hover */
 .myGit:hover{
     color: #548CA8;
 }
@@ -113,6 +138,7 @@ footer {
     width:100px;
     margin: auto;
 }
+/* Donate Button Hover */
 .donate:hover {
     zoom: 150%;
 }
@@ -135,9 +161,6 @@ footer {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-.popup:hover {
-    background-color: #548CA8;
 }
 /* The actual popup */
 .popup .popuptext {
@@ -184,59 +207,104 @@ footer {
     padding: 20px;
     margin-bottom: 125px;
 }
-/* Max width 850px wide and below */
-@media screen and (max-width: 850px) {
-   /* Result Window */
-    .calculator-container {
-        display: inline-block;
-        text-align: center;
-        height: 400px;
-   }
-   .output-window {
-        display: inline-block;
-        font-size: 2rem;
-        width: 65%;
-        height: 40px;
-        padding-top: 5px;
-   }
-   /* Buttons Container */
-    #buttons {
-        width: 100%;
-        height: 300px;
-   }
-    #equals-div {
-        width: 75%;
-        height: 100px;
-   }
-    .calculator {
-        height: 75%;
-        width: 100%;
-        margin: auto;
+/* Max width 650px wide and below */
+@media screen and (max-width: 650px) {
+.calculator-container {
+    background-color: #D0D9D9;
+}
+   /* Calculator (Grey area) */
+#calculator-div {
+    width: 350px;
+    height: 470px;
+}
+/* Result Window */
+.output-window .previous-operand {
+    font-size: 1.5rem;
+  }
+  .output-window {
+    width: 310px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+  /* Previous Operand */
+  .output-window .previous-operand {
+    font-size: 1.5rem;
+}
+  /* Current Operand */
+  .output-window .current-operand {
+    font-size: 2.5rem;
+}
+/* Button Styling */
+/*. Number Buttons */
+[data-number] {
+    width: 70px;
+    height: 70px;
+    font-size: 1.9rem;
+}
+/* Operator and Delete Buttons */
+[data-operator], [data-delete] {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+}
+/* Clear Button */
+.clear {
+    width: 143px;
+    height: 70px;
+    font-size: 2rem;
+}
+/* Equals Button */
+.equals {
+    width: 143px;
+    height: 70px;
+    font-size: 2rem;
+}
+}
+/* Max width 590px wide and below */
+@media screen and (max-width: 590px) {
+    #calculator-div {
+        width: 300px;
+        height: 430px;
     }
-   /* Button Styling */
-    .num {
-        width: 50px;
-        height: 50px;
-   }
-    .operators {
-        width: 50px;
-        height: 50px;
-   }
-    .clear {
-        width: 50px;
-        height: 50px;
-   }
-    .equals {
-        width: 215px;
+    .output-window {
+        width: 247px;
         height: 80px;
-   }
+        margin-bottom: 10px;
+    }
+/* Button Styling */
+/*. Number Buttons */
+[data-number] {
+    width: 60px;
+    height: 60px;
+    font-size: 1.9rem;
+}
+/* Operator and Delete Buttons */
+[data-operator], [data-delete] {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+/* Clear Button */
+.clear {
+    width: 123px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+/* Equals Button */
+.equals {
+    width: 123px;
+    height: 60px;
+    font-size: 2rem;
+}
 }
 /* Max width 570px wide and below */
 @media screen and (max-width: 570px) {
+    /* Result Window */
     .output-window {
         font-size: 1.5rem;
         padding-top: 10px;
    }
+   /* Pop Up */
     #myPopup {
         font-size: 1rem;
         width: 300px;
@@ -259,38 +327,61 @@ footer {
     .calculator-container {
         height: 275px;
    }
+   #calculator-div {
+       width: 250px;
+       height: 350px;
+   }
     .output-window {
-        font-size: 1.5rem;
+        width: 205px;
+        height: 50px;
    }
+    /* Previous Operand */
+  .output-window .previous-operand {
+    font-size: 1rem;
+}
+  /* Current Operand */
+  .output-window .current-operand {
+    font-size: 2rem;
+}
    /* Button Styling */
-    .num {
-        width: 30px;
-        height: 30px;
-        font-size: 1rem;
-   }
-    .operators {
-        width: 30px;
-        height: 30px;
-        font-size: 1rem;
-   }
-    .clear {
-        width: 30px;
-        height: 30px;
-        font-size: 1rem;
-   }
-    .equals {
-        width: 115px;
-        height: 40px;
-        font-size: 1rem;
-   }
+/*. Number Buttons */
+[data-number] {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+}
+/* Operator and Delete Buttons */
+[data-operator], [data-delete] {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+}
+/* Clear Button */
+.clear {
+    width: 103px;
+    height: 50px;
+    font-size: 1.2rem;
+}
+/* Equals Button */
+.equals {
+    width: 103px;
+    height: 50px;
+    font-size: 1.2rem;
+}
 }
 /* Max width 420px wide and below */
 @media screen and (max-width: 420px) {
+    .calculator-container{
+        width:300px;
+        height: 400px;
+    }
+    /* Result Window */
     .output-window {
         padding-top: 10px;
         font-size: 1rem;
         height: 30px;
    }
+   /* Pop Up */
     #myPopup {
         font-size: 0.8rem;
         width: 250px;
@@ -301,9 +392,11 @@ footer {
 }
 /* Max width 335px wide and below */
 @media screen and (max-width: 335px) {
+    /* Heading */
     h1 {
         font-size: 1rem;
    }
+   /* Pop Up */
     #myPopup {
         font-size: 0.5rem;
         width: 200px;
@@ -314,7 +407,41 @@ footer {
 }
 /* Max width 310px wide and below */
 @media screen and (max-width: 310px) {
+    /* Heading */
     h1 {
         font-size: 0.8rem;
    }
+   #calculator-div {
+    width: 200px;
+    height: 300px;
+}
+ .output-window {
+     width: 165px;
+     height: 50px;
+}
+/* Button Styling */
+/*. Number Buttons */
+[data-number] {
+ width: 40px;
+ height: 40px;
+ font-size: 0.8rem;
+}
+/* Operator and Delete Buttons */
+[data-operator], [data-delete] {
+ width: 40px;
+ height: 40px;
+ font-size: 0.8rem;
+}
+/* Clear Button */
+.clear {
+ width: 83px;
+ height: 40px;
+ font-size: 0.8rem;
+}
+/* Equals Button */
+.equals {
+ width: 83px;
+ height: 40px;
+ font-size: 0.8rem;
+}
 }
