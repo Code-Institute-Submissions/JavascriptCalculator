@@ -28,33 +28,57 @@
         </header>
         <!-- Main Div -->
         <main id="main">
+            <!-- Calculator Section -->
             <div class="calculator-container">
+                <!-- Calculator Grey Surround -->
                 <div id="calculator-div">
-                <div class="output-window">
-                    <div data-previous-operand class="previous-operand"></div>
-                    <div data-current-operand class="current-operand"></div>
+                    <!--  Result / Output Window -->
+                    <div class="output-window">
+                        <!--  Previous Operand / Number 1 -->
+                        <div data-previous-operand class="previous-operand"></div>
+                        <!--  Current Operand / Number 2 / Newest Number Press -->
+                        <div data-current-operand class="current-operand"></div>
+                    </div>
+                    <!-- Buttons Container -->
+                    <div>
+                        <!-- Clear Button -->
+                        <button data-all-clear class="clear">AC</button>
+                        <!--  Delete / Backspace Button -->
+                        <button data-delete>DEL</button>
+                        <!-- Divide Operator Button -->
+                        <button data-operator>÷</button>
+                        <!-- Button Number 1 -->
+                        <button data-number>1</button>
+                        <!-- Button Number 2 -->
+                        <button data-number>2</button>
+                        <!-- Button Number 3 -->
+                        <button data-number>3</button>
+                        <!-- Multiply Operator Button -->
+                        <button data-operator>*</button>
+                        <!-- Button Number 4 -->
+                        <button data-number>4</button>
+                        <!-- Button Number 5 -->
+                        <button data-number>5</button>
+                        <!-- Button Number 6 -->
+                        <button data-number>6</button>
+                        <!-- Addition Operator Button -->
+                        <button data-operator>+</button>
+                        <!-- Button Number 7 -->
+                        <button data-number>7</button>
+                        <!-- Button Number 8 -->
+                        <button data-number>8</button>
+                        <!-- Button Number 9 -->
+                        <button data-number>9</button>
+                        <!-- Subtract Operator Button -->
+                        <button data-operator>-</button>
+                        <!-- Decimal Button -->
+                        <button data-number>.</button>
+                        <!-- Button Number Zero -->
+                        <button data-number>0</button>
+                        <!-- Equals Operator -->
+                        <button data-equals class="equals">=</button>
+                    </div>
                 </div>
-                <div>
-                <button data-all-clear class="clear">AC</button>
-                <button data-delete>DEL</button>
-                <button data-operator>÷</button>
-                <button data-number>1</button>
-                <button data-number>2</button>
-                <button data-number>3</button>
-                <button data-operator>*</button>
-                <button data-number>4</button>
-                <button data-number>5</button>
-                <button data-number>6</button>
-                <button data-operator>+</button>
-                <button data-number>7</button>
-                <button data-number>8</button>
-                <button data-number>9</button>
-                <button data-operator>-</button>
-                <button data-number>.</button>
-                <button data-number>0</button>
-                <button data-equals class="equals">=</button>
-            </div>
-            </div>
             </div>
         </main>
         <!-- Footer Start -->
@@ -63,6 +87,7 @@
             <div class="instructionDiv">
                 <button onclick="instructionsAlert()" class="popup">
                     Instructions
+                    <!-- Actual Pop Up -->
                     <span class="popuptext" id="myPopup">
                         Welcome to the Free Javascript Calculator.<br />
                         <br />
