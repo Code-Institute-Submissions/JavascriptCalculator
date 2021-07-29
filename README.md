@@ -5,7 +5,7 @@ Take a Look [Here](https://techcentreuk.github.io/JavascriptCalculator/)
 
 ---------------------------------------------------------------------------------------------------------------------
 
-![Responsive Website]()
+![Responsive Website](https://github.com/TechCentreUK/JavascriptCalculator/blob/main/docs/responsive.png)
 
 ---------------------------------------------------------------------------------------------------------------------
 ## Milestone Project 2
