@@ -95,40 +95,40 @@ class Calculator {
     // Display Result
     displayResult() {
         this.currentOperandText.innerText =
-            this.getDisplayNumber(this.currentOperand)
+            this.getDisplayNumber(this.currentOperand);
         // If operator is not null display previousOperandText + operator
         if (this.operator != null) {
             this.previousOperandText.innerText =
                 // Concat previous + operator
-                `${this.getDisplayNumber(this.previousOperand)} ${this.operator}`
+                `${this.getDisplayNumber(this.previousOperand)} ${this.operator}`;
         } else {
             // Else set to empty string
-            this.previousOperandText.innerText = ''
+            this.previousOperandText.innerText = '';
         }
     }
 
     // Add Decimals 
     getDisplayNumber(number) {
-        const stringNumber = number.toString()
+        const stringNumber = number.toString();
         // Split interger
-        const integerDigits = parseFloat(stringNumber.split('.')[0])
+        const integerDigits = parseFloat(stringNumber.split('.')[0]);
         // Split String
-        const decimalDigits = stringNumber.split('.')[1]
-        let integerDisplay
+        const decimalDigits = stringNumber.split('.')[1];
+        let integerDisplay;
         if (isNaN(integerDigits)) {
-            integerDisplay = ''
+            integerDisplay = '';
         } else {
             // Only allows one decimal point
             integerDisplay = integerDigits.toLocaleString('en', {
                 maximumFractionDigits: 0
-            })
+            });
         }
         if (decimalDigits != null) {
             // If Decimals
-            return `${integerDisplay}.${decimalDigits}`
+            return `${integerDisplay}.${decimalDigits}`;
         } else {
             // If no Decimals
-            return integerDisplay
+            return integerDisplay;
         }
 
     }
@@ -142,8 +142,8 @@ numberButtons.forEach(button => {
         calculator.appendNum(button.innerText);
         // And display the result
         calculator.displayResult();
-    })
-})
+    });
+});
 
 // Add an event listener for each operator button innertext
 operatorButtons.forEach(button => {
@@ -151,29 +151,29 @@ operatorButtons.forEach(button => {
         calculator.selectOperator(button.innerText);
         // And display the result
         calculator.displayResult();
-    })
-})
+    });
+});
 
 // Add an event listener for equals button click
 equalsButton.addEventListener('click', button => {
     calculator.calculate();
     // And display the result
     calculator.displayResult();
-})
+});
 
 // Add an event listener for clear button click
 allClearButton.addEventListener('click', button => {
     calculator.clear();
     // And display the result
     calculator.displayResult();
-})
+});
 
 // Add an event listener for clear button click
 deleteButton.addEventListener('click', button => {
     calculator.delete();
     // And display the result
     calculator.displayResult();
-})
+});
 
 // Instructions Button
 function instructionsAlert() {
