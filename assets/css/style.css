@@ -28,7 +28,7 @@ h1 {
     height: 550px;
     background-color: #D1D9D9;
 }
-/* Focal area. / Center */ 
+/* Focal area. / Center */
 .calculator-container {
     text-align: center;
     margin: auto;
@@ -51,21 +51,21 @@ h1 {
 .output-window .previous-operand {
     color: rgba(255, 255, 255, .75);
     font-size: 1.5rem;
-  }
-  .output-window {
+}
+.output-window {
     display: inline-block;
     text-align: right;
     width: 332px;
     height: 80px;
     background-color: rgba(0, 0, 0, .75);
 }
-  /* Previous Operand */
-  .output-window .previous-operand {
+/* Previous Operand */
+.output-window .previous-operand {
     color: rgba(255, 255, 255, .75);
     font-size: 1.5rem;
 }
-  /* Current Operand */
-  .output-window .current-operand {
+/* Current Operand */
+.output-window .current-operand {
     color: white;
     font-size: 2.5rem;
 }
@@ -186,18 +186,18 @@ footer {
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
     from {
-       opacity: 0;
+        opacity: 0;
    }
     to {
-       opacity: 1;
+        opacity: 1;
    }
 }
 @keyframes fadeIn {
     from {
-       opacity: 0;
+        opacity: 0;
    }
     to {
-       opacity:1 ;
+        opacity:1 ;
    }
 }
 #myPopup {
@@ -209,97 +209,97 @@ footer {
 }
 /* Max width 650px wide and below */
 @media screen and (max-width: 650px) {
-.calculator-container {
-    background-color: #D0D9D9;
-}
+    .calculator-container {
+        background-color: #D0D9D9;
+   }
    /* Calculator (Grey area) */
-#calculator-div {
-    width: 350px;
-    height: 470px;
-}
-/* Result Window */
-.output-window .previous-operand {
-    font-size: 1.5rem;
-  }
-  .output-window {
-    width: 310px;
-    height: 80px;
-    margin-bottom: 10px;
-}
-  /* Previous Operand */
-  .output-window .previous-operand {
-    font-size: 1.5rem;
-}
-  /* Current Operand */
-  .output-window .current-operand {
-    font-size: 2.5rem;
-}
-/* Button Styling */
-/*. Number Buttons */
-[data-number] {
-    width: 70px;
-    height: 70px;
-    font-size: 1.9rem;
-}
-/* Operator and Delete Buttons */
-[data-operator], [data-delete] {
-    width: 70px;
-    height: 70px;
-    font-size: 2rem;
-}
-/* Clear Button */
-.clear {
-    width: 143px;
-    height: 70px;
-    font-size: 2rem;
-}
-/* Equals Button */
-.equals {
-    width: 143px;
-    height: 70px;
-    font-size: 2rem;
-}
+    #calculator-div {
+        width: 350px;
+        height: 470px;
+   }
+   /* Result Window */
+    .output-window .previous-operand {
+        font-size: 1.5rem;
+   }
+    .output-window {
+        width: 310px;
+        height: 80px;
+        margin-bottom: 10px;
+   }
+   /* Previous Operand */
+    .output-window .previous-operand {
+        font-size: 1.5rem;
+   }
+   /* Current Operand */
+    .output-window .current-operand {
+        font-size: 2.5rem;
+   }
+   /* Button Styling */
+   /*. Number Buttons */
+    [data-number] {
+        width: 70px;
+        height: 70px;
+        font-size: 1.9rem;
+   }
+   /* Operator and Delete Buttons */
+    [data-operator], [data-delete] {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+   }
+   /* Clear Button */
+    .clear {
+        width: 143px;
+        height: 70px;
+        font-size: 2rem;
+   }
+   /* Equals Button */
+    .equals {
+        width: 143px;
+        height: 70px;
+        font-size: 2rem;
+   }
 }
 /* Max width 590px wide and below */
 @media screen and (max-width: 590px) {
     #calculator-div {
         width: 300px;
         height: 430px;
-    }
+   }
     .output-window {
         width: 247px;
         height: 80px;
         margin-bottom: 10px;
-    }
-/* Button Styling */
-/*. Number Buttons */
-[data-number] {
-    width: 60px;
-    height: 60px;
-    font-size: 1.9rem;
-}
-/* Operator and Delete Buttons */
-[data-operator], [data-delete] {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-}
-/* Clear Button */
-.clear {
-    width: 123px;
-    height: 60px;
-    font-size: 1.5rem;
-}
-/* Equals Button */
-.equals {
-    width: 123px;
-    height: 60px;
-    font-size: 2rem;
-}
+   }
+   /* Button Styling */
+   /*. Number Buttons */
+    [data-number] {
+        width: 60px;
+        height: 60px;
+        font-size: 1.9rem;
+   }
+   /* Operator and Delete Buttons */
+    [data-operator], [data-delete] {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+   }
+   /* Clear Button */
+    .clear {
+        width: 123px;
+        height: 60px;
+        font-size: 1.5rem;
+   }
+   /* Equals Button */
+    .equals {
+        width: 123px;
+        height: 60px;
+        font-size: 2rem;
+   }
 }
 /* Max width 570px wide and below */
 @media screen and (max-width: 570px) {
-    /* Result Window */
+   /* Result Window */
     .output-window {
         font-size: 1.5rem;
         padding-top: 10px;
@@ -327,55 +327,55 @@ footer {
     .calculator-container {
         height: 275px;
    }
-   #calculator-div {
-       width: 250px;
-       height: 350px;
+    #calculator-div {
+        width: 250px;
+        height: 350px;
    }
     .output-window {
         width: 205px;
         height: 50px;
    }
-    /* Previous Operand */
-  .output-window .previous-operand {
-    font-size: 1rem;
-}
-  /* Current Operand */
-  .output-window .current-operand {
-    font-size: 2rem;
-}
+   /* Previous Operand */
+    .output-window .previous-operand {
+        font-size: 1rem;
+   }
+   /* Current Operand */
+    .output-window .current-operand {
+        font-size: 2rem;
+   }
    /* Button Styling */
-/*. Number Buttons */
-[data-number] {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-}
-/* Operator and Delete Buttons */
-[data-operator], [data-delete] {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-}
-/* Clear Button */
-.clear {
-    width: 103px;
-    height: 50px;
-    font-size: 1.2rem;
-}
-/* Equals Button */
-.equals {
-    width: 103px;
-    height: 50px;
-    font-size: 1.2rem;
-}
+   /*. Number Buttons */
+    [data-number] {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+   }
+   /* Operator and Delete Buttons */
+    [data-operator], [data-delete] {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+   }
+   /* Clear Button */
+    .clear {
+        width: 103px;
+        height: 50px;
+        font-size: 1.2rem;
+   }
+   /* Equals Button */
+    .equals {
+        width: 103px;
+        height: 50px;
+        font-size: 1.2rem;
+   }
 }
 /* Max width 420px wide and below */
 @media screen and (max-width: 420px) {
     .calculator-container{
         width:300px;
         height: 400px;
-    }
-    /* Result Window */
+   }
+   /* Result Window */
     .output-window {
         padding-top: 10px;
         font-size: 1rem;
@@ -392,7 +392,7 @@ footer {
 }
 /* Max width 335px wide and below */
 @media screen and (max-width: 335px) {
-    /* Heading */
+   /* Heading */
     h1 {
         font-size: 1rem;
    }
@@ -407,41 +407,41 @@ footer {
 }
 /* Max width 310px wide and below */
 @media screen and (max-width: 310px) {
-    /* Heading */
+   /* Heading */
     h1 {
         font-size: 0.8rem;
    }
-   #calculator-div {
-    width: 200px;
-    height: 300px;
-}
- .output-window {
-     width: 165px;
-     height: 50px;
-}
-/* Button Styling */
-/*. Number Buttons */
-[data-number] {
- width: 40px;
- height: 40px;
- font-size: 0.8rem;
-}
-/* Operator and Delete Buttons */
-[data-operator], [data-delete] {
- width: 40px;
- height: 40px;
- font-size: 0.8rem;
-}
-/* Clear Button */
-.clear {
- width: 83px;
- height: 40px;
- font-size: 0.8rem;
-}
-/* Equals Button */
-.equals {
- width: 83px;
- height: 40px;
- font-size: 0.8rem;
-}
+    #calculator-div {
+        width: 200px;
+        height: 300px;
+   }
+    .output-window {
+        width: 165px;
+        height: 50px;
+   }
+   /* Button Styling */
+   /*. Number Buttons */
+    [data-number] {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+   }
+   /* Operator and Delete Buttons */
+    [data-operator], [data-delete] {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+   }
+   /* Clear Button */
+    .clear {
+        width: 83px;
+        height: 40px;
+        font-size: 0.8rem;
+   }
+   /* Equals Button */
+    .equals {
+        width: 83px;
+        height: 40px;
+        font-size: 0.8rem;
+   }
 }
