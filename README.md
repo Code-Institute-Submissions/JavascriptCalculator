@@ -131,7 +131,7 @@ All images are responsive and nothing has been hidden.
 ![Javascript](https://github.com/TechCentreUK/JavascriptCalculator/blob/main/docs/javascript-validator.png)
 
 ### Lighthouse - Dev Tools
-![Lighthouse]()
+![Lighthouse](https://github.com/TechCentreUK/JavascriptCalculator/blob/main/docs/lighthouse.png)
 \
 I used lighthouse in dev tools to test the website in many ways, for example, I had to test my text colors contrast and adjust accordingly.
 As you can see by the above screenshot I used this to improve the websites overall performance.
